@@ -2,8 +2,10 @@ package Sem2;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 public class Tsk1 {
+    static Logger logger = Logger.getLogger(String.valueOf(Tsk1.class));
     public static void main(String[] args) {
 //        File log = new File("log.txt");
         int[] arr = new int[]{3, 9, 4, 5, 2, 7, 1, 6};
@@ -16,6 +18,7 @@ public class Tsk1 {
                     int temp2 = arr[i + 1];
                     arr[i + 1] = arr[i];
                     arr[i] = temp2;
+                    logger.info(String.valueOf(arr[i]));
 
                 }
             }
